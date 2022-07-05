@@ -281,10 +281,37 @@ select {
 } */
 
 .large-button {
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     aspect-ratio: 1;
     display: grid;
     place-items: center;
     text-decoration: none;
-    border-radius: 50%;
+    border-radius: 9999px;
+    position: relative;
+    transition: all 2s ease-in-out;
+    z-index: 1;
+    
+}
+
+
+.large-button::after {
+    content:'';
+    width:100%;
+    height: 100%;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    border-radius: 9999px;
+    position: absolute;
+    z-index: -1;
+    background-color: hsl(var(--clr-white) / 0.15);
+    opacity: 0;
+    transition: opacity 500ms linear, transform 7500ms cubic-bezier(.12, .25, 0, .99);   
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+    transform: scale(1.5);
+    opacity: 1;
 }
