@@ -121,23 +121,57 @@ import '../styles/index.css'
             <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
 
             <!-- navigation -->
-            <div></div>
+            <div>
+                <nav class="bg-dark">
+                    <ul class="primary-navigation flex list-unstyled underline-indicators" style="--gap: 4rem">
+                        <li class="active">
+                            <a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
+                                <span>00</span> Active
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
+                                <span>01</span> Hovered
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
+                                <span>02</span>Idle
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
 
             <div class="flex">
-                <div style="margin-bottom: 28rem; margin-top:8rem; margin-left: 20rem;">
+                <div style="margin: 5rem">
                     <!-- explore button -->
                     <a href=""
                         class="large-button ff-serif fs-600 uppercase bg-white text-dark letter-spacing-1">Explore</a>
                 </div>
 
-                <div>
+                <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem">
                     <!-- Tabs -->
-
+                    <div class="flex underline-indicators" style="--gap: 2rem">
+                        <button  aria-selected="true"  class="tab uppercase text-accent letter-spacing-2 ff-sans-cond bg-transparent">Moon</button>
+                        <button  aria-selected="false"  class="tab uppercase text-accent letter-spacing-2 ff-sans-cond bg-transparent">Mars</button>
+                        <button  aria-selected="false"  class="tab uppercase text-accent letter-spacing-2 ff-sans-cond bg-transparent">Europa</button>
+                    </div>
 
                     <!-- Dots -->
-
+                    <div class="dot-indicators flex">
+                        <button aria-selected="true"><span class="sr-only">Slide title</span></button>
+                        <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                        <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                    </div>
 
                     <!-- Numbers -->
+                    <div class="number-indicators flex">
+                        <button class="bg-dark text-white fs-500" aria-selected="true">1</button>
+                        <button  class="bg-dark text-white  fs-500" aria-selected="false">2</button>
+                        <button  class="bg-dark text-white  fs-500" aria-selected="false">3</button>
+                    </div>
                 </div>
             </div>
 

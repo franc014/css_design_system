@@ -162,6 +162,9 @@ select {
 .bg-white {
     background-color: hsl(var(--clr-white));
 }
+.bg-transparent {
+    background: transparent;
+}
 
 
 .text-dark {
@@ -250,6 +253,14 @@ select {
     line-height: 1.1;
 }
 
+.no-decoration {
+    text-decoration: none;
+}
+
+.list-unstyled {
+    list-style: none;
+}
+
 .numbered-title {
     text-transform: uppercase;
     color: hsl(var(--clr-white));
@@ -315,3 +326,98 @@ select {
     transform: scale(1.5);
     opacity: 1;
 }
+
+.primary-navigation {
+    margin: 0;
+    padding: 0;
+    --underline-gap: 2rem;
+    /* counter-reset: item-number -1; */
+}
+
+
+/* .primary-navigation li a::before {
+    counter-increment: item-number;
+    content: '0' counter(item-number) '';
+   
+} */
+.primary-navigation li a {
+    --gap: 0.5rem;
+    font-weight: 200;
+}
+.primary-navigation li a > span {
+    color: hsl(var(--clr-white));
+    font-weight: 700;
+}
+
+.underline-indicators > * {
+    cursor: pointer;
+    padding-block-end: var(--underline-gap,1rem);
+    border-block-end: .2rem solid hsl(var(--clr-white) / 0);
+}
+.underline-indicators > *:hover, 
+.underline-indicators > *:focus{
+    border-color: hsl(var(--clr-white) / 0.5);  
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"]
+{
+    color: hsl(var(--clr-white));
+    border-color: hsl(var(--clr-white));
+}
+
+
+.tab {
+   border-block-start:none;
+   border-inline: none;
+   padding-inline:0;
+}
+
+.dot-indicators > * {
+    border-radius: 9999px;
+    aspect-ratio: 1;
+    padding:0.5rem;
+    background-color: hsl(var(--clr-white) / 0.25);
+    border:0;
+    cursor: pointer;
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus
+{
+    background-color: hsl(var(--clr-white) / 0.5);
+}
+
+.dot-indicators > [aria-selected="true"]{
+    background-color: hsl(var(--clr-white));
+}
+
+.number-indicators {
+    flex-direction: column;
+}
+
+.number-indicators > * {
+    border: 1px solid hsl(var(--clr-light) / 0.3);
+    border-radius: 9999px;
+    width: 4.4rem;
+    aspect-ratio: 1;
+    font-family: var(--ff-serif);
+    cursor: pointer;
+    padding: 0;
+}
+
+.number-indicators > *:hover,
+.number-indicators > *:focus
+{
+    border: 1px solid hsl(var(--clr-white));
+}
+
+.number-indicators > [aria-selected="true"]{
+    background-color: hsl(var(--clr-white));
+    color:hsl(var(--clr-dark))
+}
+
+
+
+
+
