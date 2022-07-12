@@ -1,20 +1,69 @@
 ---
 import '../styles/index.css'
+import favicon from '../assets/favicon-32x32.png';
 ---
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Astro</title>
-	</head>
-	<body>
-		<div class="container grid" style="--gap:10rem">
-			<div class="box">a</div>
-			<div class="box sr-only">b</div>
-			<div class="box">c</div>
-			<div class="box">d</div>
-			<div class="box">e</div>
-		</div>
-		
-	</body>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" type="image/png" sizes="32x32" href={favicon}>
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+		rel="stylesheet">
+
+	<title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body>
+
+	<header class="grid container">
+		<svg class="logo" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g id="Group 2">
+				<circle id="Oval" cx="24" cy="24" r="24" fill="white" />
+				<path id="Path" fill-rule="evenodd" clip-rule="evenodd"
+					d="M24 0C24 0 24 24 0 24C23.5776 24.1714 24 48 24 48C24 48 24 24 48 24C24 24 24 0 24 0Z"
+					fill="#0B0D17" />
+			</g>
+		</svg>
+
+		<nav class="bg-dark flex">
+
+			<ul class="primary-navigation flex list-unstyled ">
+				<li class="active">
+					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
+						<span>00</span> Active
+					</a>
+				</li>
+				<li>
+					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
+						<span>01</span> Hovered
+					</a>
+				</li>
+				<li>
+					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
+						<span>02</span>Idle
+					</a>
+				</li>
+			</ul>
+
+
+			<!-- <svg class="hamb" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect width="24" height="3" fill="#D0D6F9" />
+				<rect y="9" width="24" height="3" fill="#D0D6F9" />
+				<rect y="18" width="24" height="3" fill="#D0D6F9" />
+			</svg> -->
+
+
+		</nav>
+	</header>
+
+
+</body>
+
 </html>
