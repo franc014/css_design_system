@@ -1,20 +1,64 @@
 ---
 import '../styles/index.css'
+import logo from '../assets/logo.svg';
 ---
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Astro</title>
-	</head>
-	<body>
-		<div class="container grid" style="--gap:10rem">
-			<div class="box">a</div>
-			<div class="box sr-only">b</div>
-			<div class="box">c</div>
-			<div class="box">d</div>
-			<div class="box">e</div>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Astro</title>
+</head>
+
+<body>
+	<header class="primary-header flex">
+		<div>
+			<img src={logo} alt="space tourism logo" class="logo" />
 		</div>
-		
-	</body>
+		<nav>
+			<ul class="primary-navigation flex list-unstyled underline-indicators" style="--gap: 4rem">
+				<li class="active">
+					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
+						Home
+					</a>
+				</li>
+				<li>
+					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
+						Destination
+					</a>
+				</li>
+				<li>
+					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
+						Crew
+					</a>
+				</li>
+				<li>
+					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
+						Technology
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="grid-container">
+		<div>
+			<h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1 main-heading">So, you want to travel
+				to
+				<span class="fs-900 ff-serif text-white">Space</span>
+			</h1>
+			<p>
+				Let’s face it; if you want to go to space, you might as well genuinely go to
+				outer space and not hover kind of on the edge of it. Well sit back, and relax
+				because we’ll give you a truly out of this world experience!
+			</p>
+		</div>
+
+		<div>
+			<!-- explore button -->
+			<a href="" class="large-button ff-serif fs-600 uppercase bg-white text-dark letter-spacing-1">Explore</a>
+		</div>
+	</main>
+</body>
+
 </html>
