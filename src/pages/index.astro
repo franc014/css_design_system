@@ -11,12 +11,12 @@ import logo from '../assets/logo.svg';
 	<title>Astro</title>
 </head>
 
-<body>
+<body class="home">
 	<header class="primary-header flex">
 		<div>
 			<img src={logo} alt="space tourism logo" class="logo" />
 		</div>
-		<nav>
+		<!-- <nav>
 			<ul class="primary-navigation flex list-unstyled underline-indicators" style="--gap: 4rem">
 				<li class="active">
 					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
@@ -39,13 +39,14 @@ import logo from '../assets/logo.svg';
 					</a>
 				</li>
 			</ul>
-		</nav>
+		</nav> -->
 	</header>
-	<main class="grid-container">
+	<main class="grid-container grid-container--home">
+
 		<div>
-			<h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1 main-heading">So, you want to travel
+			<h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1 ">So, you want to travel
 				to
-				<span class="fs-900 ff-serif text-white">Space</span>
+				<span class="fs-900 ff-serif text-white d-block">Space</span>
 			</h1>
 			<p>
 				Let’s face it; if you want to go to space, you might as well genuinely go to
@@ -56,8 +57,10 @@ import logo from '../assets/logo.svg';
 
 		<div>
 			<!-- explore button -->
-			<a href="" class="large-button ff-serif fs-600 uppercase bg-white text-dark letter-spacing-1">Explore</a>
+			<a href="" class="large-button ff-serif uppercase bg-white text-dark letter-spacing-1">Explore</a>
 		</div>
+
+
 	</main>
 </body>
 
