@@ -1,6 +1,7 @@
 ---
 import '../styles/index.css'
 import logo from '../assets/logo.svg';
+
 ---
 
 <html lang="en">
@@ -16,30 +17,38 @@ import logo from '../assets/logo.svg';
 		<div>
 			<img src={logo} alt="space tourism logo" class="logo" />
 		</div>
-		<!-- <nav>
-			<ul class="primary-navigation flex list-unstyled underline-indicators" style="--gap: 4rem">
+		<button class="mobile-nav-toggle text-accent fs-700" aria-controls="primary-navigation">
+			<span class="sr-only" aria-expanded="false">Menu</span>
+		</button>
+		<nav>
+			<ul id="primary-navigation" class="primary-navigation flex list-unstyled underline-indicators">
 				<li class="active">
+
 					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
-						Home
+						<span>01</span> Home
 					</a>
 				</li>
 				<li>
+
 					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
-						Destination
+						<span>02</span> Destination
 					</a>
 				</li>
 				<li>
+
 					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
-						Crew
+						<span>03</span> Crew
 					</a>
 				</li>
 				<li>
+
 					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
-						Technology
+						<span>04</span> Technology
 					</a>
 				</li>
 			</ul>
-		</nav> -->
+		</nav>
+
 	</header>
 	<main class="grid-container grid-container--home">
 
@@ -62,6 +71,11 @@ import logo from '../assets/logo.svg';
 
 
 	</main>
+
 </body>
 
 </html>
+<script>
+	import { toggle } from "../menu.js";
+	toggle();
+</script>

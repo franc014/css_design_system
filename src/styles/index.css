@@ -95,6 +95,7 @@ body {
 
     display: grid;
     grid-template-rows: min-content 1fr;
+    overflow-x: hidden;
 }
 
 /* Make images easier to work with */
@@ -415,15 +416,19 @@ select {
     margin: 0;
     padding: 0;
     --underline-gap: 2rem;
-    /* counter-reset: item-number -1; */
+
+    background: hsl(var(--clr-dark) / 0.95);
+    
 }
 
+/* adding support of backdrop-filter for browsers like firefox */
+@supports (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+        background: hsl(var(--clr-white) / 0.05);
+        backdrop-filter: blur(1.5rem);
+    }
+}
 
-/* .primary-navigation li a::before {
-    counter-increment: item-number;
-    content: '0' counter(item-number) '';
-   
-} */
 .primary-navigation li a {
     --gap: 0.5rem;
     font-weight: 200;
@@ -529,5 +534,103 @@ select {
     }
 }
 
+/* ********************** */
+/* Navigation  */
+/* ********************** */
+
+/* My version */
+
+/* .primary-header {
+    padding-inline: 2rem;
+    position: relative;
+}
+.primary-header > div{
+   margin-right: auto;
+}
+
+.primary-header nav {
+    padding-right: 3rem;
+}
+
+.primary-navigation {
+    --gap: 1.5rem;
+    flex-direction: column;
+    background-color: hsl(var(--clr-white) / 0.2);
+    padding: 4rem 3rem;
+    position: absolute;
+    top:0;
+    right: 0;
+    z-index: 2;
+    min-height: 100vh;
+    
+}
+
+.primary-navigation li{
+    display: flex;
+}
+.primary-navigation li span{
+    margin-right: 1rem;
+    font-weight: 700;
+}
 
 
+
+.mobile-nav-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+    padding: 2rem 0;
+    z-index: 3;
+} */
+
+
+/* Only for this case we use desktop first, because we have made a lot of work on 
+the desktop version already */
+@media (max-width: 35rem) {
+    .primary-navigation {
+        --underline-gap: .5rem;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
+        
+    }
+    /* to avoid problems with specificity */
+    .primary-navigation.underline-indicators>.active {
+        border: 0;
+    }
+    .mobile-nav-toggle {
+         display: flex;
+         align-items: center;
+         position: absolute;
+         z-index: 2000;
+         right: 1rem;
+         top: 2rem;
+         background-color: transparent;
+         border: 0;
+         background-image: url(../assets/hamb.svg);
+         width: 1.5rem;
+         aspect-ratio: 1;
+         background-repeat: no-repeat;
+         cursor: pointer;
+         font-weight: bold;
+         
+    }
+
+    .is-open {
+        transform: translateX(0);
+        transition: transform 500ms ease-in-out;
+        
+    }
+
+    .mobile-nav-toggle:focus-visible {
+            outline: 5px solid red;
+            outline-offset: 5px;
+    }
+}
