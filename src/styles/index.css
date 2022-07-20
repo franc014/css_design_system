@@ -383,7 +383,7 @@ select {
     text-decoration: none;
     border-radius: 9999px;
     position: relative;
-    transition: all 2s ease-in-out;
+    transition: all 500ms ease-in-out;
     z-index: 1;
     font-size: 2rem;
    
@@ -412,11 +412,28 @@ select {
     opacity: 1;
 }
 
-.primary-navigation {
-    margin: 0;
-    padding: 0;
-    --underline-gap: 2rem;
+.logo {
+    margin: 2rem clamp(1.5rem,5vw,3.5rem);
+}
 
+.primary-header {
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* .line {
+    position: absolute;
+    left: 10rem;
+    top: 4.8rem;
+    z-index: 6;
+    width: 35%;
+} */
+
+.primary-navigation {
+    --gap: clamp(1.5rem, 5vw, 3.5rem);
+    margin: 0;
+    --underline-gap: 2rem;
     background: hsl(var(--clr-dark) / 0.95);
     
 }
@@ -440,7 +457,7 @@ select {
 
 .underline-indicators > * {
     cursor: pointer;
-    padding-block-end: var(--underline-gap,1rem);
+    padding-block: var(--underline-gap,1rem);
     border-block-end: .2rem solid hsl(var(--clr-white) / 0);
 }
 .underline-indicators > *:hover, 
@@ -584,7 +601,9 @@ select {
     z-index: 3;
 } */
 
-
+/* .mobile-nav-toggle  {
+    display: none;
+} */
 /* Only for this case we use desktop first, because we have made a lot of work on 
 the desktop version already */
 @media (max-width: 35rem) {
@@ -633,4 +652,39 @@ the desktop version already */
             outline: 5px solid red;
             outline-offset: 5px;
     }
+}
+
+@media (min-width: 35em) {
+    .primary-navigation {
+        padding-inline: clamp(3rem, 7vw, 7rem);
+    }
+    .mobile-nav-toggle {
+         display: none;
+    }
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+    .primary-navigation a>span {
+        display: none;
+    }
+}
+
+@media (min-width: 45em) {
+    .primary-navigation {
+        margin-block: 2rem;
+    }
+    .primary-header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: 200%;
+        margin-right: -2.5rem;
+        background: hsl(var(--clr-white) / .25);
+        order: 1;
+    }
+    nav {
+        order: 2;
+    }
+   
 }
