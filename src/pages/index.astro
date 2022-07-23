@@ -14,6 +14,7 @@ import line from '../assets/line.svg';
 </head>
 
 <body class="home">
+	<a href="#main" class="skip-to-content">Skip to content</a>
 	<header class="primary-header flex">
 		<div>
 			<img src={logo} alt="space tourism logo" class="logo" />
@@ -27,32 +28,32 @@ import line from '../assets/line.svg';
 				<li class="active">
 
 					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
-						<span>01</span> Home
+						<span aria-hidden="true">01</span> Home
 					</a>
 				</li>
 				<li>
 
 					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
-						<span>02</span> Destination
+						<span aria-hidden="true">02</span> Destination
 					</a>
 				</li>
 				<li>
 
 					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
-						<span>03</span> Crew
+						<span aria-hidden="true">03</span> Crew
 					</a>
 				</li>
 				<li>
 
 					<a href="#" class="uppercase letter-spacing-2 fs-300 text-white no-decoration flex">
-						<span>04</span> Technology
+						<span aria-hidden="true">04</span> Technology
 					</a>
 				</li>
 			</ul>
 		</nav>
 
 	</header>
-	<main class="grid-container grid-container--home">
+	<main class="grid-container grid-container--home" id="main">
 
 		<div>
 			<h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1 ">So, you want to travel
